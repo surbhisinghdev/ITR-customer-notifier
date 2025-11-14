@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional ITR Assistance | Request Callback</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2575fc;
+            --primary-dark: #1a60d4;
+            --secondary: #6a11cb;
+            --text: #2d3748;
+            --text-light: #718096;
+            --background: #ffffff;
+            --success: #38a169;
+            --error: #e53e3e;
+            --border: #e2e8f0;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        * { box-sizing: border-box; margin:0; padding:0; }
+        body, html {
+            margin:0; padding:0; font-family:'Roboto',sans-serif; min-height:100%;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container {
+            display:flex;
+            flex-direction: column;
+            width:95%;
+            max-width:1100px;
+            margin:20px auto;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        @media(min-width:768px) {
+            .container { flex-direction: row; min-height:600px; }
+        }
+        .info-panel {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color:white;
+            padding: 20px;
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+        }
+        @media(min-width:768px) { .info-panel { width:45%; } }
+        .form-panel {
+            background: var(--background);
+            padding: 20px;
+            display:flex; flex-direction: column; justify-content:center;
+        }
+        @media(min-width:768px) { .form-panel { width:55%; } }
+        .logo { display:flex; align-items:center; margin-bottom:15px; font-family:'Poppins',sans-serif; font-weight:600; font-size:1.4rem; }
+        .logo i { margin-right:8px; font-size:1.6rem; }
+        h1 { font-family:'Poppins',sans-serif; font-weight:600; font-size:1.6rem; margin-bottom:12px; line-height:1.3; }
+        .info-panel h1 { font-size:1.8rem; margin-bottom:15px; }
+        .subtitle { color: rgba(255,255,255,0.9); margin-bottom:20px; font-size:1rem; }
+        .benefits { list-style:none; margin:20px 0; }
+        .benefits li { display:flex; align-items:center; margin-bottom:12px; font-size:0.9rem; }
+        .benefits i { margin-right:10px; color: rgba(255,255,255,0.9); font-size:1rem; }
+        .trust-badge { display:flex; align-items:center; margin-top:20px; padding:12px; background: rgba(255,255,255,0.1); border-radius:6px; }
+        .trust-badge i { font-size:1.8rem; margin-right:10px; }
+        .trust-badge div { font-size:0.85rem; line-height:1.3; }
+        .form-intro { color: var(--text-light); margin-bottom:18px; font-size:0.95rem; }
+        .input-group { margin-bottom:14px; position:relative; }
+        input, select { width:100%; padding:12px; border-radius:6px; border:1px solid var(--border); font-family:'Roboto',sans-serif; font-size:0.95rem; transition:all 0.3s ease; }
+        input:focus, select:focus { outline:none; border-color:var(--primary); box-shadow:0 0 0 2px rgba(37,117,252,0.2); }
+        label { display:block; margin-bottom:6px; font-weight:500; font-size:0.85rem; color:var(--text); }
+        .optional { color:var(--text-light); font-weight:400; }
+        button { width:100%; padding:14px; margin-top:8px; background: var(--primary); border:none; color:white; font-family:'Poppins',sans-serif; font-size:1rem; font-weight:500; border-radius:6px; cursor:pointer; transition: background 0.3s ease; box-shadow:0 3px 5px rgba(37,117,252,0.2); }
+        button:disabled { background:#a0aec0; cursor:not-allowed; box-shadow:none; }
+        button:hover:not(:disabled) { background: var(--primary-dark); }
+        #formMessage { margin-top:15px; padding:10px; border-radius:6px; text-align:center; font-weight:500; }
+        .success { background-color: rgba(56,161,105,0.1); color: var(--success); border:1px solid rgba(56,161,105,0.2); }
+        .error { background-color: rgba(229,62,62,0.1); color: var(--error); border:1px solid rgba(229,62,62,0.2); }
+        .info { background-color: rgba(37,117,252,0.1); color: var(--primary); border:1px solid rgba(37,117,252,0.2); }
+        .footer { display:flex; justify-content:space-between; align-items:center; margin-top:20px; padding-top:15px; border-top:1px solid var(--border); flex-wrap:wrap; }
+        .privacy { font-size:0.8rem; color:var(--text-light); }
+        .privacy a { color:var(--primary); text-decoration:none; }
+        .linkedin a { color:#0e76a8; text-decoration:none; font-weight:500; display:flex; align-items:center; }
+        .linkedin i { margin-right:6px; }
+        .linkedin a:hover { text-decoration:underline; }
+
+        @media(max-width:767px) {
+            .container { flex-direction: column; width:95%; margin:15px auto; }
+            .info-panel, .form-panel { width:100%; padding:15px; }
+            h1 { font-size:1.4rem; }
+            .info-panel h1 { font-size:1.5rem; margin-bottom:12px; }
+            .footer { flex-direction: column; align-items:flex-start; gap:8px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="info-panel">
+        <div class="logo"><i class="fas fa-calculator"></i>Professional ITR Assistance</div>
+        <h1>Expert ITR Filing Assistance Just a Call Away</h1>
+        <p class="subtitle">Let our certified tax professionals handle your tax filing needs with accuracy and efficiency.</p>
+        <ul class="benefits">
+            <li><i class="fas fa-check-circle"></i>Certified tax consultants with 5+ years experience</li>
+            <li><i class="fas fa-check-circle"></i>Maximum refund guarantee</li>
+            <li><i class="fas fa-check-circle"></i>Error-free filing with 100% accuracy</li>
+            <li><i class="fas fa-check-circle"></i>Dedicated support until processing complete</li>
+        </ul>
+        <div class="trust-badge">
+            <i class="fas fa-shield-alt"></i>
+            <div><strong>Your information is secure and confidential</strong><br>We use encryption to protect your data and never share it with third parties.</div>
+        </div>
+    </div>
+
+    <div class="form-panel">
+        <h1>Request a Callback</h1>
+        <p class="form-intro">Provide your details and our tax expert will call you within 24 hours to understand your requirements.</p>
+        <form id="callbackForm">
+            <div class="input-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" placeholder="Enter your full name" required autofocus>
+            </div>
+            <div class="input-group">
+                <label for="contact">Phone Number *</label>
+                <input type="text" id="contact" placeholder="Enter your 10-digit mobile number" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email <span class="optional">(Optional)</span></label>
+                <input type="email" id="email" placeholder="Enter your email address">
+            </div>
+            <div class="input-group">
+                <label for="occupation">Occupation <span class="optional">(Optional)</span></label>
+                <select id="occupation">
+                    <option value="">Select your occupation</option>
+                    <option value="Salaried">Salaried Employee</option>
+                    <option value="Business">Business Owner</option>
+                    <option value="Freelancer">Freelancer/Consultant</option>
+                    <option value="Investor">Investor</option>
+                    <option value="Retired">Retired</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <button type="submit" id="submitBtn">Request Callback</button>
+            <div id="formMessage"></div>
+        </form>
+        <div class="footer">
+            <div class="linkedin"><a href="https://www.linkedin.com/in/singh-nidhi-91525a199/" target="_blank"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("callbackForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const submitBtn = document.getElementById("submitBtn");
+      const messageDiv = document.getElementById("formMessage");
+
+      const name = document.getElementById("name").value.trim();
+      const contact = document.getElementById("contact").value.trim();
+      const email = document.getElementById("email").value.trim() || null;
+      const occupation = document.getElementById("occupation").value || null;
+
+      if(!name){ messageDiv.innerText="Please enter your name"; messageDiv.className="error"; document.getElementById("name").focus(); return; }
+      const phoneRegex=/^[0-9]{10}$/;
+      if(!phoneRegex.test(contact)){ messageDiv.innerText="Please enter a valid 10-digit phone number"; messageDiv.className="error"; document.getElementById("contact").focus(); return; }
+
+      const payload={name, contact, email, occupation, isAdminNotified:false};
+      submitBtn.disabled=true; submitBtn.textContent="Processing..."; messageDiv.innerText="Submitting your request..."; messageDiv.className="info";
+
+      fetch("http://localhost:8080/api/leads/",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)})
+      .then(async response=>{
+        const data = await response.json();
+        if(response.ok){ messageDiv.innerText=`Thank you, ${name}! We'll call you at ${contact} within 24 hours.`; messageDiv.className="success"; document.getElementById("callbackForm").reset(); }
+        else{ messageDiv.innerText=`Error: ${data.message || "Failed to submit your request. Please try again."}`; messageDiv.className="error"; }
+      })
+      .catch(error=>{ console.error("Request failed:",error); messageDiv.innerText="Network error. Please check your connection and try again."; messageDiv.className="error"; })
+      .finally(()=>{ submitBtn.disabled=false; submitBtn.textContent="Request Callback"; });
+    });
+
+    document.getElementById('contact').addEventListener('input',function(){ this.value=this.value.replace(/\D/g,'').slice(0,10); });
+    document.getElementById('name').addEventListener('input',function(){ this.value=this.value.replace(/[^a-zA-Z\s]/g,''); });
+</script>
+
+</body>
+</html>

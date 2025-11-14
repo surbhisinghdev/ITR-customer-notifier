@@ -1,0 +1,11 @@
+-- Create LeadRequest table
+CREATE TABLE IF NOT EXISTS `leads` (
+    `id` BIGINT AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(100) NOT NULL,
+    `contact` VARCHAR(20) NOT NULL,
+    `email` VARCHAR(100),
+    `occupation` VARCHAR(50),
+    `is_admin_notified` BOOLEAN NOT NULL DEFAULT FALSE,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
